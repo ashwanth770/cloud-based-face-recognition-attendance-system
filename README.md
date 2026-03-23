@@ -1,22 +1,17 @@
 # cloud-based-face-recognition-attendance-system
 
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![Flask](https://img.shields.io/badge/Flask-Backend-lightgrey)
-![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
-![Rekognition](https://img.shields.io/badge/AWS-Rekognition-yellow)
-
-## 📌 Overview
+## Overview
 A cloud-native attendance management system that uses facial recognition to 
 automatically mark students/employees as **Present**, **Absent**, or 
 **Not Registered** — eliminating proxy attendance and manual effort.
 
-## 🏗️ Architecture
+## Architecture
 User Webcam → EC2 (Flask API) → AWS Rekognition → DynamoDB (logs)
                                       ↕
                                   Amazon S3
                           (registered faces + frames)
 
-## ☁️ AWS Services Used
+## AWS Services Used
 | Service | Role |
 |---|---|
 | EC2 | Hosts Flask backend (port 5000) |
@@ -25,14 +20,14 @@ User Webcam → EC2 (Flask API) → AWS Rekognition → DynamoDB (logs)
 | DynamoDB | Attendance log storage |
 | IAM | Secure service-to-service access |
 
-## ⚙️ Features
+## Features
 - Face registration via web dashboard
 - Real-time webcam attendance marking
 - Three-state classification: Present / Absent / Not Registered
 - Admin panel with date filtering and CSV export
 - Secure IAM role-based access (no hardcoded credentials)
 
-## 🚀 Setup & Deployment
+## Setup & Deployment
 
 ### Prerequisites
 - AWS Account with EC2, S3, Rekognition, DynamoDB access
@@ -67,7 +62,7 @@ python3 app.py
 - Register users: `/register`
 - Admin panel: `/admin`
 
-## 📁 S3 Bucket Structure
+## S3 Bucket Structure
 ```
 your-bucket/
 ├── registered_faces/      # Known user images
@@ -75,7 +70,7 @@ your-bucket/
 └── archived_attendance/   # CSV backups
 ```
 
-## 📊 DynamoDB Schema
+## DynamoDB Schema
 | Field | Type | Description |
 |---|---|---|
 | user_id | String | Registered user identifier |
@@ -83,22 +78,13 @@ your-bucket/
 | status | String | Present / Not Registered / Invalid |
 | image_s3_key | String | Reference to frame in S3 |
 
-## 🔮 Future Scope
+## Future Scope
 - AWS SageMaker for custom model training
 - AWS SNS for real-time alerts
 - Mobile app with offline sync
 - Multi-tenant SaaS deployment
 - Analytics dashboard with attendance trends
 
-## 👥 Team
-| Name | ID |
-|---|---|
-| Nivesh Kumar Thanupillai | 23BAI1531 |
-| Hemanthkumar Sathish | 23BAI1496 |
-| Manda Sai Nikhil | 23BAI1312 |
-| Ashwanth S | 23BAI1505 |
-
-> VIT Chennai — BCSE355L Cloud Architecture Design
 ```
 
 ---
