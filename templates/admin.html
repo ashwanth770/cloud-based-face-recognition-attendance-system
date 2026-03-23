@@ -1,0 +1,12 @@
+<!doctype html><html><body>
+<h2>Attendance Logs</h2>
+<a href="/export">Download CSV</a>
+<table border="1">
+<tr><th>User ID</th><th>Timestamp</th><th>Status</th></tr>
+{% for log in logs %}
+<tr>
+<td>{{ log.user_id }}</td><td>{{ log.timestamp }}</td><td>{{ log.status }}</td>
+</tr>
+{% endfor %}
+</table>
+</body></html>
