@@ -82,5 +82,4 @@ your-bucket/
 - Multi-tenant SaaS deployment
 - Analytics dashboard with attendance trends
 
-```
 
