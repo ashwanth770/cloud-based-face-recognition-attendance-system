@@ -84,13 +84,3 @@ your-bucket/
 
 ```
 
----
-
-### `.gitignore` (add this too)
-```
-__pycache__/
-*.pem
-*.env
-.env
-venv/
-*.pyc
