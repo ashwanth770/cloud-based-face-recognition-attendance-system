@@ -6,10 +6,7 @@ automatically mark students/employees as **Present**, **Absent**, or
 **Not Registered** — eliminating proxy attendance and manual effort.
 
 ## Architecture
-User Webcam → EC2 (Flask API) → AWS Rekognition → DynamoDB (logs)
-                                      ↕
-                                  Amazon S3
-                          (registered faces + frames)
+User Webcam → EC2 (Flask API) → AWS Rekognition → DynamoDB (logs) → Amazon S3 (registered faces + frames)
 
 ## AWS Services Used
 | Service | Role |
